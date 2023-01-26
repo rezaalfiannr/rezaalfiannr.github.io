@@ -1,8 +1,14 @@
+h1 .display-4 {
+  font-weight: bold;
+}
 .jumbotron {
   padding-top: 6rem;
   background-color: #00a7f528;
 }
 #projects {
+  background-color: #00a7f528;
+}
+#foto {
   background-color: #00a7f528;
 }
 footer {
@@ -12,4 +18,89 @@ footer {
 }
 section {
   padding-top: 5rem;
+}
+.gallery-img {
+  width: 100%;
+}
+#gallery .row > * {
+  padding: 0;
+}
+.foto-box {
+  position: relative;
+  background-color: #009aa5;
+  border-radius: 10px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+.foto-box::before {
+  content: "MY";
+  position: absolute;
+  color: #ffff;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.foto-box:hover::before {
+  opacity: 0.2;
+}
+.foto-box::after {
+  content: "FOTO";
+  position: absolute;
+  color: #ffff;
+  font-size: 3.5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 265px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.foto-box:hover::after {
+  opacity: 0.2;
+}
+.foto-name {
+  position: absolute;
+  color: #ffff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transition: 0.5s;
+  top: 0;
+  transform: translate3d(0, 0, 50px);
+  width: 100%;
+}
+.foto-box:hover .foto-name {
+  top: 20px;
+  opacity: 1;
+}
+.foto-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 95px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+.foto-box:hover .foto-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+.foto-img {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate3d(-50%, -55%, 90px);
+  max-width: 350px;
+  transition: 0.5s;
+  z-index: 10;
+}
+.foto-box:hover .foto-img {
+  transform: translate(-50%, -55%, 90px) scale(1.2);
 }
